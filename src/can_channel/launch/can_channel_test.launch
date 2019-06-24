@@ -1,0 +1,35 @@
+<!-- -*- mode: XML -*- -->
+<launch>
+
+  
+
+  <arg name="can_hardware_id_receiver" default="11631" />
+  <arg name="can_circuit_id_receiver" default="0" />
+  <arg name="can_bit_rate_receiver" default="500000" />
+
+  <node ns="kvaser_receiver" pkg="kvaser_interface" type="kvaser_can_bridge" name="kvaser_can_bridge_receiver">
+    <param name="can_hardware_id" value="$(arg can_hardware_id_receiver)" />
+    <param name="can_circuit_id" value="$(arg can_circuit_id_receiver)" />
+    <param name="can_bit_rate" value="$(arg can_bit_rate_receiver)" />
+  </node>
+
+  <arg name="can_hardware_id_transmitter" default="11631" />
+  <arg name="can_circuit_id_transmitter" default="1" />
+  <arg name="can_bit_rate_transmitter" default="500000" />
+
+  <node ns="kvaser_transmitter" pkg="kvaser_interface" type="kvaser_can_bridge" name="kvaser_can_bridge_transmitter">
+    <param name="can_hardware_id" value="$(arg can_hardware_id_transmitter)" />
+    <param name="can_circuit_id" value="$(arg can_circuit_id_transmitter)" />
+    <param name="can_bit_rate" value="$(arg can_bit_rate_transmitter)" />
+  </node>
+
+  <node ns="CAN_Parser" pkg="can_channel" type="node" name="parser" output="screen">
+    <param name="dbc_file_input" textfile="$(find can_channel)/apollo_v447_v2.1_integration_apollo.dbc" />
+    <param name="dbc_file_output" textfile="$(find can_channel)/apollo_v447_v2.1_integration_apollo.dbc" />
+    <param name="vehicle_speed" value="5" />
+    <param name="blink_right" value="0" />
+    <param name="blink_left" value="0" />
+ 
+  </node>
+
+</launch>

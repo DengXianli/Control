@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/auto/Control/src/kvaser_interface/include/kvaser_interface/kvaser_interface.h
+canlib.h
+-
+iostream
+-
+memory
+-
+string
+-
+vector
+-
+functional
+-
+
+/home/auto/Control/src/kvaser_interface/tools/list_channels.cpp
+kvaser_interface/kvaser_interface.h
+/home/auto/Control/src/kvaser_interface/tools/kvaser_interface/kvaser_interface.h
+iostream
+-
+algorithm
+-
+

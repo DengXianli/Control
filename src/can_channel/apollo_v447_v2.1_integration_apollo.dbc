@@ -1,0 +1,228 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_:
+VAL_TABLE_ Veh_BADU_Trunindicator_request 3 "Both_indicator_Off" 2 "Rt_indicator_On" 1 "Lt_indicator_On" 0 "Manual Mode" ;
+VAL_TABLE_ Veh_BrkPdl_Stat 3 "SNA" 2 "NDEF" 1 "Braking " 0 "IDLE   " ;
+VAL_TABLE_ Veh_AccelPdlPosn 255 "SNA" ;
+
+
+BO_ 40 Veh_Light_Stat: 8 Vector__XXX
+ SG_ FogLmp_R_On_Rq : 6|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Rev_light_On : 4|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ HiBm_On : 3|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ LoBm_On : 2|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Brk_light_On : 1|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Hrn_On : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 16 Veh_TurnIndicator_Stat: 8 Vector__XXX
+ SG_ Turnind_Rt_On : 1|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Turnind_Lt_On : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 17 Veh_Stat: 8 Vector__XXX
+ SG_ Veh_AD_Avl : 3|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Veh_IgniSta : 0|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ Veh_AD_Status : 7|2@0+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 39 Veh_Str_Stat: 8 Vector__XXX
+ SG_ Veh_StW_HandsOn : 56|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Veh_StW_Anglspd : 54|14@0+ (0.5,-2048) [-2048|2047] "deg/s" Vector__XXX
+ SG_ Veh_Int_EPS : 4|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ Veh_FtWhl_Angle : 37|15@0+ (0.005,-81.92) [-81.92|81.91] "deg" Vector__XXX
+ SG_ Veh_StW_Torque : 19|14@0+ (0.01,-81.92) [-81.92|81.9] "Nm" Vector__XXX
+ SG_ Veh_StW_Angl : 1|14@0+ (0.5,-2048) [-2048|2047] "deg" Vector__XXX
+ SG_ Veh_STA_Stat : 2|2@1+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 144 Veh_Lon_Stat: 8 Vector__XXX
+ SG_ Veh_BrkPdl_Stat : 56|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Veh_AccelPdlPosn : 48|8@1+ (0.4,0) [0|100] "%" Vector__XXX
+ SG_ Veh_Gearposition : 8|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ Veh_Eng_Torque : 39|13@0+ (0.25,-500) [-500|1547.5] "Nm" Vector__XXX
+ SG_ Veh_Eng_Rpm : 23|14@0+ (1,0) [0|16382] "rpm" Vector__XXX
+ SG_ Veh_Brk_Torque : 7|12@0+ (3,0) [0|12282] "Nm" Vector__XXX
+
+BO_ 152 Veh_Whl_Stat: 8 Vector__XXX
+ SG_ Veh_WhlRR_Rpm : 55|14@0+ (0.5,0) [0|8191] " rpm" Vector__XXX
+ SG_ Veh_WhlRL_Rpm : 39|14@0+ (0.5,0) [0|8191] " rpm" Vector__XXX
+ SG_ Veh_WhlFR_Rpm : 23|14@0+ (0.5,0) [0|8191] " rpm" Vector__XXX
+ SG_ Veh_WhlFL_Rpm : 7|14@0+ (0.5,0) [0|8191] " rpm" Vector__XXX
+
+BO_ 25 Veh_Dyn_Stat: 8 Vector__XXX
+ SG_ Veh_Speed : 39|12@0+ (0.1,0) [0|409.4] "km/h" Vector__XXX
+ SG_ Veh_YawRate : 23|16@0+ (0.01,-327.68) [-327.68|327.66] "deg/s" Vector__XXX
+ SG_ Veh_Accel_Y : 8|8@1+ (0.08,-10.24) [-10.24|10.08] "m/ss" Vector__XXX
+ SG_ Veh_Accel_X : 0|8@1+ (0.08,-10.24) [-10.24|10.08] "m/ss" Vector__XXX
+
+BO_ 3 BADU_request: 8 Vector__XXX
+ SG_ BADU_TurnIndicator_Request : 40|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ BADU_StAng_Request : 24|12@1+ (0.02,-40.96) [-40.96|40.94] "deg" Vector__XXX
+ SG_ BADU_Acceleration_Request : 8|10@1+ (0.01,-4) [-4|3.5] "m/ss" Vector__XXX
+ SG_ BADU_DriveMode_Request : 2|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ BADU_AutoMode_Request : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+
+
+
+CM_ SG_ 40 FogLmp_R_On_Rq "Fog lamps rear on";
+CM_ SG_ 40 Rev_light_On "Reverse light is on";
+CM_ SG_ 40 HiBm_On "High beam is on";
+CM_ SG_ 40 LoBm_On "Low beam on";
+CM_ SG_ 40 Brk_light_On "Brake light in on";
+CM_ SG_ 40 Hrn_On "Horn is on";
+CM_ SG_ 16 Turnind_Rt_On "Turn indication right is on
+0x00: off
+0x01:on
+
+";
+CM_ SG_ 16 Turnind_Lt_On "Turn indication left is on
+0x00: off
+0x01:on
+
+";
+CM_ SG_ 17 Veh_AD_Avl "AD mode availeble";
+CM_ SG_ 17 Veh_IgniSta "Ignition switch state";
+CM_ BO_ 39 "Steering state";
+CM_ SG_ 39 Veh_StW_HandsOn "DTQ bit for HandsOn-Detected";
+CM_ SG_ 39 Veh_StW_Anglspd "Steering wheel angle speed";
+CM_ SG_ 39 Veh_Int_EPS "EPS Interface state";
+CM_ SG_ 39 Veh_FtWhl_Angle "front wheel angle (+ means left)";
+CM_ SG_ 39 Veh_StW_Torque "Actual steering wheel torqe";
+CM_ SG_ 39 Veh_StW_Angl "Steering wheel angle";
+CM_ SG_ 39 Veh_STA_Stat "Steering assist state";
+CM_ BO_ 144 "longitudinal control state: Powertrain and brake";
+CM_ SG_ 144 Veh_BrkPdl_Stat "Brake Pedel State";
+CM_ SG_ 144 Veh_AccelPdlPosn "Accelerator pedal position value";
+CM_ SG_ 144 Veh_Gearposition "Actual gear";
+CM_ SG_ 144 Veh_Eng_Torque "Actual static engine torque";
+CM_ SG_ 144 Veh_Eng_Rpm "Actual engine rpm";
+CM_ SG_ 144 Veh_Brk_Torque "Actual driving brake torque";
+CM_ SG_ 152 Veh_WhlRR_Rpm "Wheel rpm rear right";
+CM_ SG_ 152 Veh_WhlRL_Rpm "Wheel rpm rear left";
+CM_ SG_ 152 Veh_WhlFR_Rpm "Wheel rpm front right";
+CM_ SG_ 152 Veh_WhlFL_Rpm "Wheel rpm front left";
+CM_ SG_ 25 Veh_Speed "Vehicle speed";
+CM_ SG_ 25 Veh_YawRate "Vehicle yaw rate unfiltered/unadjusted (+ means left)";
+CM_ SG_ 25 Veh_Accel_Y "Vehicle lateral acceleration (+ means forward";
+CM_ SG_ 25 Veh_Accel_X "Vehicle longitudinal acceleration, + means forward";
+CM_ SG_ 3 BADU_TurnIndicator_Request "Turnindicator request from BADU: 
+0x00: Manual Mode
+0x01: Left turn indicator on
+0x02: Right turn indicator on
+0x03: Both turn indicator off
+";
+CM_ SG_ 3 BADU_StAng_Request "Steering angle request from BADU";
+CM_ SG_ 3 BADU_Acceleration_Request "desired forward and backward acceleration ";
+CM_ SG_ 3 BADU_DriveMode_Request "The desired drive mode: Switch gears to Park, Forward and Backward";
+CM_ SG_ 3 BADU_AutoMode_Request "AD mode status of Baidu ADU";
+BA_DEF_ SG_  "GenSigStartValue" HEX 0 0;
+BA_DEF_ SG_  "GenSigSNA" STRING ;
+BA_DEF_ BU_  "MostApFBlockID" INT 0 255;
+BA_DEF_ BU_  "MostApInstIDDefault" INT 0 255;
+BA_DEF_ BU_  "MostGrpAdr" INT 0 0;
+BA_DEF_  "MostXMLFile" STRING ;
+BA_DEF_ BO_  "MostDestAdr" INT 0 65535;
+BA_DEF_ BO_  "MostSrcAdr" INT 0 65535;
+BA_DEF_ BO_  "OpType" ENUM  "Set","Get","SetGet","Increment","Decrement","GetInterface","Status","Interface","Error","Start","Abort","StartResult","StartAck","ErrorAck","Processing","Result","ResultAck","Reserved","NDef","ProcessingAck","AbortAck","StartResultAck";
+BA_DEF_ BO_  "MostInstId" INT 0 255;
+BA_DEF_ BO_  "FunctionClass" ENUM  "Property","Method";
+BA_DEF_ BO_  "Function" STRING ;
+BA_DEF_ BO_  "FBlock" STRING ;
+BA_DEF_ BU_  "MostNodeAdr" INT 0 0;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_DEF_  "GenSigStartValue" 0;
+BA_DEF_DEF_  "GenSigSNA" "";
+BA_DEF_DEF_  "MostApFBlockID" 0;
+BA_DEF_DEF_  "MostApInstIDDefault" 1;
+BA_DEF_DEF_  "MostGrpAdr" 0;
+BA_DEF_DEF_  "MostXMLFile" "";
+BA_DEF_DEF_  "MostDestAdr" 0;
+BA_DEF_DEF_  "MostSrcAdr" 0;
+BA_DEF_DEF_  "OpType" "";
+BA_DEF_DEF_  "MostInstId" 0;
+BA_DEF_DEF_  "FunctionClass" "Property";
+BA_DEF_DEF_  "Function" "";
+BA_DEF_DEF_  "FBlock" "GeneralBlock";
+BA_DEF_DEF_  "MostNodeAdr" 0;
+BA_DEF_DEF_  "BusType" "MOST";
+BA_ "BusType" "CAN";
+BA_ "GenSigStartValue" SG_ 40 Rev_light_On 3;
+BA_ "GenSigStartValue" SG_ 17 Veh_AD_Avl 1;
+BA_ "GenSigStartValue" SG_ 17 Veh_IgniSta 7;
+BA_ "GenSigStartValue" SG_ 39 Veh_StW_Anglspd 16383;
+BA_ "GenSigStartValue" SG_ 39 Veh_Int_EPS 15;
+BA_ "GenSigStartValue" SG_ 39 Veh_FtWhl_Angle 32767;
+BA_ "GenSigStartValue" SG_ 39 Veh_StW_Torque 16383;
+BA_ "GenSigStartValue" SG_ 39 Veh_StW_Angl 16383;
+BA_ "GenSigStartValue" SG_ 144 Veh_BrkPdl_Stat 3;
+BA_ "GenSigStartValue" SG_ 144 Veh_AccelPdlPosn 255;
+BA_ "GenSigStartValue" SG_ 144 Veh_Gearposition 15;
+BA_ "GenSigStartValue" SG_ 144 Veh_Eng_Torque 8191;
+BA_ "GenSigStartValue" SG_ 144 Veh_Eng_Rpm 16383;
+BA_ "GenSigStartValue" SG_ 144 Veh_Brk_Torque 4095;
+BA_ "GenSigStartValue" SG_ 152 Veh_WhlRR_Rpm 16383;
+BA_ "GenSigStartValue" SG_ 152 Veh_WhlRL_Rpm 16383;
+BA_ "GenSigStartValue" SG_ 152 Veh_WhlFR_Rpm 16383;
+BA_ "GenSigStartValue" SG_ 152 Veh_WhlFL_Rpm 16383;
+BA_ "GenSigStartValue" SG_ 25 Veh_Speed 4095;
+BA_ "GenSigStartValue" SG_ 25 Veh_YawRate 65535;
+BA_ "GenSigStartValue" SG_ 25 Veh_Accel_Y 255;
+BA_ "GenSigStartValue" SG_ 25 Veh_Accel_X 255;
+VAL_ 40 Rev_light_On 3 "NaN" 2 "SNA" 1 "On" 0 "Off" ;
+VAL_ 17 Veh_IgniSta 7 "SNA" 5 "IGN_START" 4 "IGN_ON" 2 "IGN_ACC" 1 "IGN_OFF" 0 "IGN_LOCK" ;
+VAL_ 17 Veh_AD_Status 3 "Shutdown" 2 "Engaged" 0 "OFF" ;
+VAL_ 39 Veh_StW_HandsOn 1 "Hands on the steerwheel" 0 "Hands off the steerwheel" ;
+VAL_ 39 Veh_StW_Anglspd 16383 "SNA" ;
+VAL_ 39 Veh_Int_EPS 15 "SNA" 9 "EPS_RAMP_LK" 8 "EPS_RAMP_CAN" 7 "EPS_CAN" 6 "EPS_Lk" 5 "EPS_RF_ANGL_STEER" 4 "EPS_RF_STEER" 3 "EPS_ANGL_STEER" 2 "EPS_RDY" 1 "EPS_OFF" 0 "NDEF0" ;
+VAL_ 39 Veh_FtWhl_Angle 32767 "SNA" ;
+VAL_ 39 Veh_StW_Torque 16383 "SNA" ;
+VAL_ 39 Veh_StW_Angl 16383 "SNA" ;
+VAL_ 39 Veh_STA_Stat 3 "SNA" 2 "NDEF2" 1 "STA_AVL" 0 "STA_OFF" ;
+VAL_ 144 Veh_BrkPdl_Stat 3 "SNA" 2 "NDEF" 1 "Braking " 0 "IDLE   " ;
+VAL_ 144 Veh_AccelPdlPosn 255 "SNA" ;
+VAL_ 144 Veh_Gearposition 15 "SNA" 14 "PWRFREE" 13 "P" 12 "R2" 11 "R" 9 "D9" 8 "D8" 7 "D7" 6 "D6" 5 "D5" 4 "D4" 3 "D3" 2 "D2" 1 "D1" 0 "N" ;
+VAL_ 144 Veh_Eng_Torque 8191 "SNA" ;
+VAL_ 144 Veh_Eng_Rpm 16383 "SNA" ;
+VAL_ 144 Veh_Brk_Torque 4095 "SNA" ;
+VAL_ 152 Veh_WhlRR_Rpm 16383 "SNA" ;
+VAL_ 152 Veh_WhlRL_Rpm 16383 "SNA" ;
+VAL_ 152 Veh_WhlFR_Rpm 16383 "SNA" ;
+VAL_ 152 Veh_WhlFL_Rpm 16383 "SNA" ;
+VAL_ 25 Veh_Speed 4095 "SNA" ;
+VAL_ 25 Veh_YawRate 65535 "SNA" ;
+VAL_ 25 Veh_Accel_Y 255 "SNA" ;
+VAL_ 25 Veh_Accel_X 255 "SNA" ;
+VAL_ 3 BADU_TurnIndicator_Request 3 "Both_indicator_Off" 2 "Rt_indicator_On" 1 "Lt_indicator_On" 0 "Manual Mode" ;
+VAL_ 3 BADU_DriveMode_Request 4 "Switch to Backward" 3 "Switch to Forward" 2 "Park" 1 "Reverse" 0 "Forward" ;
+VAL_ 3 BADU_AutoMode_Request 1 "Engaged" 0 "OFF" ;
+

@@ -1,0 +1,8 @@
+prefix=/home/auto/Control/devel
+
+Name: can_channel
+Description: Description of can_channel
+Version: 0.0.0
+Cflags: -I/home/auto/Control/devel/include -I/home/auto/Control/src/can_channel/include
+Libs: -L/home/auto/Control/devel/lib -lcan_channel
+Requires: can_msgs roscpp message_runtime

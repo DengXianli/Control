@@ -1,0 +1,8 @@
+prefix=/home/auto/Control/install
+
+Name: dbc
+Description: Description of dbc
+Version: 1.0.0
+Cflags: -I/home/auto/Control/install/include
+Libs: -L/home/auto/Control/install/lib -ldbc
+Requires: 

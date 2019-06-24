@@ -1,0 +1,8 @@
+prefix=/home/auto/Control/devel
+
+Name: control
+Description: Description of control
+Version: 0.0.0
+Cflags: -I/home/auto/Control/devel/include -I/home/auto/Control/src/control/include
+Libs: -L/home/auto/Control/devel/lib -lcontrol
+Requires: roscpp std_msgs autoware_msgs sensor_msgs geometry_msgs message_runtime

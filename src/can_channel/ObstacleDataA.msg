@@ -1,0 +1,11 @@
+Header header
+uint8 ObstacleID
+uint16 ObstaclePosX
+uint16 ObstaclePosY
+uint16 ObstacleVelX
+uint8 ObstacleType
+uint8 ObstacleStatus
+uint8 ObstacleBrakeLights
+uint8 ObstacleValid
+uint8 BlinkerInfo
+uint8 Cut_in_and_Out

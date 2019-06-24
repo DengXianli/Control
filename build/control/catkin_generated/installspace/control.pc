@@ -1,0 +1,8 @@
+prefix=/home/auto/Control/install
+
+Name: control
+Description: Description of control
+Version: 0.0.0
+Cflags: -I/home/auto/Control/install/include
+Libs: -L/home/auto/Control/install/lib -lcontrol
+Requires: roscpp std_msgs autoware_msgs sensor_msgs geometry_msgs message_runtime

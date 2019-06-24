@@ -1,0 +1,49 @@
+<!-- -*- mode: XML -*- -->
+<launch>
+
+  <arg name="wheel_base" default="3.43" />
+  <arg name="Control_PERIOD" default="0.02" />
+  <arg name="Compute_PERIOD" default="0.02" />
+
+
+  <arg name="speed_kp" default="0.8" />
+  <arg name="speed_ki" default="0.2" />
+  <arg name="accel_max" default="4" />
+  <arg name="accel_min" default="-4" />
+
+  <arg name="com_lateral_w" default="0.7" />
+  <arg name="com_lateral_kp" default="0.8" />
+  <arg name="com_lateral_ki" default="1" />
+
+  <arg name="com_dir_w" default="1" />
+  <arg name="com_dir_kp" default="0.8" />
+  <arg name="com_dir_ki" default="1" />
+
+
+  <node pkg="control" type="control" name="control" output="screen">
+    <param name="wheel_base" value="$(arg wheel_base)" />
+    <param name="Control_PERIOD" value="$(arg Control_PERIOD)" />
+    <param name="Compute_PERIOD" value="$(arg Compute_PERIOD)" />
+    <param name="speed_kp" value="$(arg speed_kp)" />
+    <param name="speed_ki" value="$(arg speed_ki)" />
+    <param name="accel_max" value="$(arg accel_max)" />
+    <param name="accel_min" value="$(arg accel_min)" />
+    <param name="com_lateral_w" value="$(arg com_lateral_w)" />
+    <param name="com_lateral_kp" value="$(arg com_lateral_kp)" />
+    <param name="com_lateral_ki" value="$(arg com_lateral_ki)" />
+    <param name="com_dir_w" value="$(arg com_dir_w)" />
+    <param name="com_dir_kp" value="$(arg com_dir_kp)" />
+    <param name="com_dir_ki" value="$(arg com_dir_ki)" />
+ 
+  </node>
+
+  <node pkg="can_channel" type="node" name="can_parser" output="screen">
+    <param name="dbc_file_input" textfile="$(find can_channel)/apollo_v447_v2.1_integration_apollo.dbc" />
+    <param name="dbc_file_output" textfile="$(find can_channel)/apollo_v447_v2.1_integration_apollo.dbc" />
+    <param name="gear_mode" value="3" />
+ 
+  </node>
+
+
+
+</launch>
